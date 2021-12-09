@@ -153,14 +153,14 @@
     </div>
     <script>
       var scrolled = false;
-      window.addEventListener("scroll", () => {
+      window.addEventListener('scroll', () => {
         if (scrolled === false) {
           scrolled = true;
           setTimeout(() => {
-            var defer = document.getElementsByTagName("iframe");
+            var defer = document.getElementsByTagName('iframe');
             for (var i = 0; i < defer.length; i ++) {
-              if (defer[i].getAttribute("data-src")) {
-                defer[i].setAttribute("src", defer[i].getAttribute("data-src"));
+              if (defer[i].getAttribute('data-src')) {
+                defer[i].setAttribute('src', defer[i].getAttribute('data-src'));
               }
             }
           }, 1000)
