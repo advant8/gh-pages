@@ -153,19 +153,19 @@
     </div>
     <script>
       var scrolled = false;
-      window.addEventListener('scroll', function() {
-        if (scrolled === false) {
-          scrolled = true;
-          setTimeout(() => {
+      window.onload = function() {
+        window.addEventListener('scroll', function() {
+          if (scrolled === false) {
+            scrolled = true;
             var defer = document.getElementsByTagName('iframe');
             for (var i = 0; i < defer.length; i ++) {
               if (defer[i].getAttribute('data-src')) {
                 defer[i].setAttribute('src', defer[i].getAttribute('data-src'));
               }
             }
-          }, 1000)
-        }
-      });
+          }
+        });
+      }
     </script>
   </body>
 </html>
