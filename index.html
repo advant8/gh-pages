@@ -154,11 +154,8 @@
     <script>
       window.onload = function() {
         var scrolled = false;
-        alert('loaded');
         window.addEventListener('scroll', function() {
-          alert('scroll');
           if (scrolled === false) {
-            alert('scrolled');
             scrolled = true;
             var defer = document.getElementsByTagName('iframe');
             for (var i = 0; i < defer.length; i ++) {
